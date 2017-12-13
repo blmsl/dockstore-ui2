@@ -47,6 +47,7 @@ export class WorkflowComponent extends Entry {
   mode: string;
   workflowEditData: any;
   dnastackURL: string;
+  fireCloudURL: string;
   public workflow;
   public missingWarning: boolean;
   public title: string;
@@ -98,6 +99,7 @@ export class WorkflowComponent extends Entry {
       myParams.set('path', workflowRef.path);
       myParams.set('descriptorType', workflowRef.descriptorType);
       this.dnastackURL = Dockstore.DNASTACK_IMPORT_URL + '?' + myParams;
+      this.fireCloudURL = Dockstore.FIRECLOUD_IMPORT_URL + '?' + myParams;
     }
   }
 
